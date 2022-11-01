@@ -1,3 +1,5 @@
+from PIL import Image
+
 
 import cv2
 import numpy as np
@@ -76,13 +78,12 @@ def GuidedFilter(p, i, r, e):
     q = mean_a * i + mean_b
     return q
  
- 
+  
 # 主程序
 def DeHaze():
     path, output, photo, t0, w = opt.input, opt.output, opt.photo, opt.threshold_value, opt.dehaze_degree
     # 读取待处理图像
-    im = cv2.imread("E:/3.png")
-    
+    im = cv2.imread("E:\3.png")
      #im=cv2.imread("E:/Wu.jpeg")
     img = im.astype('float64') / 255
     img_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY).astype('float64') / 255
