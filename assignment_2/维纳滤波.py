@@ -120,5 +120,5 @@ if __name__ == '__main__':
         plt.subplot(231 + i)
         plt.xlabel(key)
         plt.imshow(np.flip(imgName, axis=2))
-
-    plt.show()
+        #显示结果
+        plt.show()
